@@ -1,0 +1,17 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class VaccineDAO {
+	Connection con = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	
+	
+	final String insert = "";
+	public void insertResv(String resvNO,String jumin,String vCode,String hCode,String resvDate,String resvTime) {
+		
+	}
+}

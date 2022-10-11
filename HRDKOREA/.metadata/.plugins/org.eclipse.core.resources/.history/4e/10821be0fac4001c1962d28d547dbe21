@@ -1,0 +1,36 @@
+create table TBL_JUMIN_202108 (
+	jumin char(14) not null,
+	pname varchar2(16),
+	tel varchar2(13),
+	address varchar2(10),	
+	primary key (jumin)
+)
+
+create table TBL_HOSP_202108 (
+	hospcode char(4) not null,
+	hospname varchar2(10),
+	hosptel varchar2(10),
+	hospaddr varchar2(10),
+	primary key (hospcode)
+)
+
+create table TBL_VACCRESV_202108 (
+	resvno char(8) not null,
+	jumin char(14),
+	vcode char(4),
+	hospcode char(4),
+	resvdate char(8),
+	resvtime char(4),
+	primary key (resvno)
+)
+
+insert into TBL_JUMIN_202108 values('710101-1000001','김주민','010-1234-0001','서울');
+insert into TBL_JUMIN_202108 values('710101-1000002','이주민','010-1234-0002','서울');
+insert into TBL_JUMIN_202108 values('710101-1000003','박주민','010-1234-0003','서울');
+insert into TBL_JUMIN_202108 values('710101-1000004','조주민','010-1234-0004','대전');
+insert into TBL_JUMIN_202108 values('710101-1000005','홍주민','010-1234-0005','대전');
+insert into TBL_JUMIN_202108 values('710101-1000006','나주민','010-1234-0006','대구');
+insert into TBL_JUMIN_202108 values('710101-1000007','황주민','010-1234-0007','대구');
+insert into TBL_JUMIN_202108 values('710101-1000008','용주민','010-1234-0008','광주');
+insert into TBL_JUMIN_202108 values('710101-1000009','백주민','010-1234-0009','광주');
+insert into TBL_JUMIN_202108 values('710101-1000010','송주민','010-1234-0010','광주');

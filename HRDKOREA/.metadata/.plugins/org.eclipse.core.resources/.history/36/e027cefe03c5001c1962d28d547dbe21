@@ -1,0 +1,82 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="header.jsp" %>
+
+<section>
+	<h2>백신접종예약</h2>
+	<form action="/insertProc.jsp" name="form" mothod="post">
+		<table>
+			<tr>
+				<td>접종예약번호</td>
+				<td><input type="text" name="resvno">예)</td>
+			</tr>
+			<tr>
+				<td>주민번호</td>
+				<td><input type="text" name="jumin">예)</td>
+			</tr>
+			<tr>
+				<td>백신코드</td>
+				<td><input type="text" name="vcode">예)</td>
+			</tr>
+			<tr>
+				<td>병원코드</td>
+				<td><input type="text" name="hcode">예)</td>
+			</tr>
+			<tr>
+				<td>예약일자</td>
+				<td><input type="text" name="resvDate">예)</td>
+			</tr>
+			<tr>
+				<td>예약시간</td>
+				<td><input type="text" name="resvTime">예)</td>
+			</tr>
+			<tr>
+				<td><button type="button" onclick="onClick()">등록</button></td>
+				<td><button type="button" onclick="reset2()" >다시쓰기</button></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+		function onClick() {
+			if(document.form.resvno.value == ""){
+				document.form.resvno.focus();
+				alert("접종예약번호가 입력되지 않았습니다.");
+				return;
+			}
+			if(document.form.jumin.value == ""){
+				document.form.jumin.focus();
+				alert("주민번호가 입력되지 않았습니다.");
+				return;
+			}
+			if(document.form.vcode.value == ""){
+				document.form.vcode.focus();
+				alert("백신코드가 입력되지 않았습니다.");
+				return;
+			}
+			if(document.form.hcode.value == ""){
+				document.form.hcode.focus();
+				alert("병원코드가 입력되지 않았습니다.");
+				return;
+			}
+			if(document.form.resvDate.value == ""){
+				document.form.resvDate.focus();
+				alert("예약일자가 입력되지 않았습니다.");
+				return;
+			}
+			if(document.form.resvTime.value == ""){
+				document.form.resvTime.focus();
+				alert("예약시간이 입력되지 않았습니다.");
+				return;
+			}
+			document.form.submit();	
+		}	
+		function reset2() {
+			document.form.reset();
+			alert("리셋");
+		}
+		
+	
+	</script>    
+</section>
+
+<%@include file="footer.jsp" %>

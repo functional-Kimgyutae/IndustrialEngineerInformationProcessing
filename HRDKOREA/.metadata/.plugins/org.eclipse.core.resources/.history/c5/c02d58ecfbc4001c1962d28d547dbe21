@@ -1,0 +1,17 @@
+package vo;
+
+public class ResvVO {
+	private String pName;
+	private String jumin;
+	private String sex;
+	private String tel;
+	private String resvDate;
+	private String resvTime;
+	private String hospName;
+	private String hospTel;
+	private String vData;
+	
+	
+	
+	//이름,주민번호,성별,전화번호,예약일자,예약시간,병원명,대표전화,병원주소,백신종류
+}
